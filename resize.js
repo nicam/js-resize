@@ -26,7 +26,7 @@ Liip.resizer = (function ($) {
      */
     var startResize = function () {
         $.when(
-            createImage($("#inputImage").get(0).src)
+            createImage($("#inputImage").attr('src'))
         ).then(resize, function () {console.log('error')});
     };
 
@@ -45,7 +45,7 @@ Liip.resizer = (function ($) {
         while (mainCanvas.width > size) {
             mainCanvas = halfSize(mainCanvas);
         }
-        $('#outputImage').get(0).src = mainCanvas.toDataURL("image/jpeg");
+        $('#outputImage').attr('src', mainCanvas.toDataURL("image/jpeg"));
     };
 
     /*
