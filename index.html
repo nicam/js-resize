@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0 maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <title>Client Side Image resize</title>
+    <style>
+    body {
+        font-family: 'Open Sans', sans-serif;
+    }
+    </style>
+</head>
+<body>
+    <input type="button" value="Resize Image" id="resize" />
+    <input type="range" id="size" min="128" max="1024">
+    <br/>
+    <div>
+        <h1>Resized Image</h1>
+        <img id="outputImage" />
+    </div>
+    <div>
+        <h1>Original Image</h1>
+        <img id="inputImage" src="example.jpg" width="1024" height="768" />
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="resize.js"></script>
+</body>
+</html>
